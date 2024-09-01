@@ -28,6 +28,7 @@
           pkgs.neovim
           pkgs.raycast
           pkgs.obsidian
+          pkgs.git
         ];
 
       services.nix-daemon.enable = true;
