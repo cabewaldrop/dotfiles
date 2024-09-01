@@ -41,6 +41,8 @@
           pkgs.luarocks
           pkgs.atuin
           pkgs.bat
+          pkgs.lazygit
+          pkgs.terraform
         ];
 
       services.nix-daemon.enable = true;
