@@ -43,6 +43,8 @@
           pkgs.bat
           pkgs.lazygit
           pkgs.terraform
+          pkgs.ollama
+          pkgs.direnv
         ];
 
       services.nix-daemon.enable = true;
