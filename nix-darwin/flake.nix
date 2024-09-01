@@ -44,14 +44,18 @@
           pkgs.lazygit
           pkgs.terraform
           pkgs.ollama
-          pkgs.direnv
         ];
+
+      environment.shells = [
+        pkgs.zsh
+      ];
 
       services.nix-daemon.enable = true;
       nix.settings.experimental-features = "nix-command flakes";
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 4;
       nixpkgs.hostPlatform = "aarch64-darwin";
+      security.pam.enableSudoTouchIdAuth = true;
 
       users.users.cabewaldrop.home = "/Users/cabewaldrop";
       home-manager.backupFileExtension = "backup";
@@ -62,11 +66,18 @@
         dock.autohide = true;
         dock.mru-spaces = false;
         finder.AppleShowAllExtensions = true;
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.AppleShowAllFiles = true;
       };
 
       programs.zsh = {
         enable = true;
         enableCompletion = true;
+        enableSyntaxHighlighting = true;
+      };
+
+      programs.direnv = {
+        enable = true;
       };
       
       # Homebrew needs to be installed on its own!
