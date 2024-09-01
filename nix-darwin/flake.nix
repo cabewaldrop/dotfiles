@@ -29,11 +29,22 @@
           pkgs.raycast
           pkgs.obsidian
           pkgs.git
+          pkgs.zellij
+          pkgs.zoxide
+          pkgs.pnpm
+          pkgs.asdf-vm
+	        pkgs.zsh
+          pkgs.starship
+          pkgs.just
+          pkgs.jq
+          pkgs.lua
+          pkgs.luarocks
+          pkgs.atuin
+          pkgs.bat
         ];
 
       services.nix-daemon.enable = true;
       nix.settings.experimental-features = "nix-command flakes";
-      programs.zsh.enable = true;  # default shell on catalina
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 4;
       nixpkgs.hostPlatform = "aarch64-darwin";
@@ -49,10 +60,16 @@
         finder.AppleShowAllExtensions = true;
       };
 
+      programs.zsh = {
+        enable = true;
+        enableCompletion = true;
+      };
+      
       # Homebrew needs to be installed on its own!
       homebrew.enable = true;
       homebrew.casks = [
         "nikitabobko/tap/aerospace"
+        "orbstack"
       ];
       homebrew.brews = [
 	      "imagemagick"

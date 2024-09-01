@@ -7,7 +7,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit
 compinit
-source <(kubectl completion zsh)
 complete -C '/usr/local/bin/aws_completer' aws
 
 bindkey '^w' autosuggest-execute
@@ -104,6 +103,8 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # Nix!
 export NIX_CONF_DIR=$HOME/.config/nix
+export NIXPKGS_ALLOW_UNFREE=1
 alias dr='darwin-rebuild switch --flake ~/dotfiles/nix-darwin --impure'
 
 eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
