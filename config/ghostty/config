@@ -1,3 +1,4 @@
+command=/bin/zsh
 font-family = "Hack Nerd Font"
 font-size = 14
 theme = "Solarized Darcula"

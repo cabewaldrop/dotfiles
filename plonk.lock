@@ -43,13 +43,6 @@ resources:
         version: 0.30.0
       installed_at: "2025-07-30T06:23:34-06:00"
     - type: package
-      id: brew:aider
-      metadata:
-        manager: brew
-        name: aider
-        version: 0.85.2
-      installed_at: "2025-07-30T06:23:36-06:00"
-    - type: package
       id: brew:bats-core
       metadata:
         manager: brew
@@ -147,21 +140,6 @@ resources:
         name: lazygit
         version: 0.53.0
       installed_at: "2025-07-30T06:24:10-06:00"
-    - type: package
-      id: brew:mcfly
-      metadata:
-        manager: brew
-        name: mcfly
-        version: 0.9.3
-      installed_at: "2025-07-30T06:24:12-06:00"
-    - type: package
-      id: go:deadcode
-      metadata:
-        manager: go
-        name: deadcode
-        source_path: golang.org/x/tools/cmd/deadcode@latest
-        version: v0.35.0
-      installed_at: "2025-07-30T16:37:25-06:00"
     - type: package
       id: brew:helix
       metadata:
@@ -358,3 +336,26 @@ resources:
         name: ccusage
         version: 15.7.1
       installed_at: "2025-08-04T15:17:05-06:00"
+    - type: package
+      id: brew:mcfly
+      metadata:
+        manager: brew
+        name: mcfly
+        version: 0.9.3
+      installed_at: "2025-08-09T08:41:51-06:00"
+    - type: package
+      id: npm:@anthropic-ai/claude-code
+      metadata:
+        full_name: '@anthropic-ai/claude-code'
+        manager: npm
+        name: '@anthropic-ai/claude-code'
+        scope: '@anthropic-ai'
+        version: 1.0.72
+      installed_at: "2025-08-09T08:49:24-06:00"
+    - type: package
+      id: brew:orbstack
+      metadata:
+        manager: brew
+        name: orbstack
+        version: ""
+      installed_at: "2025-08-09T08:52:49-06:00"
